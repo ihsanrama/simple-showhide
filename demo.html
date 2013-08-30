@@ -1,0 +1,89 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Show Hide</title>
+<script type="text/javascript" src="js/jquery-1.4.4.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+
+ // Load Page di awal
+ $("div#form").hide();
+ $("a#hideForm").hide();
+
+ // Tampilkan DIV ID=Form setelah klik A ID=ShowForm
+ $("a#showForm").click(function(){
+ //$("a").addClass("test");
+ $("div#form").show();
+ $("a#hideForm").show();
+ $("a#showForm").hide();
+ });
+
+ // Sembunyikan DIV ID=Form setelah klik A ID=HideForm
+ $("a#hideForm").click(function(){
+ // $("a").removeClass("test");
+ $("div#form").hide();
+ $("a#showForm").show();
+ $("a#hideForm").hide();
+ });
+});
+</script>
+<style type="text/css">
+body
+{
+ font-family:Arial, Helvetica, sans-serif;
+ font-size:12px;
+ color:#333333;
+}
+#form
+{
+ padding:10px;
+ width:500px;
+ margin:20px 0px 20px 0px;
+ border:1px solid #CCCCCC;
+ font-family:Arial, Helvetica, sans-serif;
+ font-size:12px;
+}
+a img
+{
+ border:0 none;
+}
+a
+{
+ color:#003399;
+ text-decoration:none;
+}
+</style>
+</head>
+
+<body>
+
+<a id="showForm" href="#"><img src="images/expanded.png" /> &nbsp; Show Form</a>
+<a id="hideForm" href="#"><img src="images/collapsed.png" />&nbsp; Hide Form</a>
+<br /><br />
+<div id="form">
+
+ <h2>Tadaaa ... I am the form.</h2>
+
+ <form>
+ <label>Update Score : </label>
+ <input type="text" size="50" />
+ &nbsp;
+ <input type="submit" value="Save" />
+ </form>
+</div>
+
+<div >
+<p>
+ You can click above link to show the form
+</p>
+</div>
+
+<div>
+ <p>Original Post :
+ <a href="http://ihsanrama.wordpress.com/2011/01/27/really-simple-show-hide-div-with-jquery">ihsanrama.wordpress.com</a>
+ </p>
+</div>
+</body>
+</html>
